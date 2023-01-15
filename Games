@@ -1,0 +1,57 @@
+import random
+
+computer_choice = random.randint(1,3)
+
+# 1 = Rock; 2 = Paper; 3 = Scissors
+
+while True:
+    player_choice = input("Choose rock, paper, scissors. \nChoose 'R' for rock, 'P' for paper or 'S' for scissors. ").upper()
+    if player_choice not in ("R", "P", "S"):
+        print("Not an appropriate choice. Please try again.")
+    else:
+        break
+
+if computer_choice == 1:
+    computer_choice = "Rock"
+elif computer_choice == 2:
+    computer_choice = "Paper"
+elif computer_choice == 3:
+    computer_choice = "Scissors"
+
+if computer_choice == "Rock" and player_choice == "R":
+    print(computer_choice)
+    print("Both got rock. It's a draw, play again.")
+elif computer_choice == "Paper" and player_choice == "R":
+    print(computer_choice)
+    print("Paper wraps the rock. You lose.")
+elif computer_choice == "Scissors" and player_choice == "R":
+    print(computer_choice)
+    print("Rock blunts scissors. You win.")
+
+# Player chooses paper
+elif computer_choice == "Rock" and player_choice == "P":
+    print(computer_choice)
+    print("Paper wraps the rock. You win.")
+elif computer_choice == "Paper" and player_choice == "P":
+    print(computer_choice)
+    print("Both got paper. It's a draw, play again.")
+elif computer_choice == "Scissors" and player_choice == "P":
+    print(computer_choice)
+    print("Scissors cut paper. You lose.")
+
+#Player chooses scissors
+elif computer_choice == "Rock" and player_choice == "S":
+    print(computer_choice)
+    print("Rock blunts scissors. You lose.")
+elif computer_choice == "Paper" and player_choice == "S":
+    print(computer_choice)
+    print("Scissors cut paper. You win.")
+elif computer_choice == "Scissors" and player_choice == "S":
+    print(computer_choice)
+    print("Both got scissors. It's a draw, play again.")
+
+
+
+
+
+
